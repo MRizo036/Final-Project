@@ -1,0 +1,27 @@
+{
+  "name": "Final-Project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MRizo036/Final-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MRizo036/Final-Project/issues"
+  },
+  "homepage": "https://github.com/MRizo036/Final-Project#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
+    "node": "^13.2.0",
+    "node-fetch": "^2.6.0",
+    "pug": "^2.0.4"
+  }
+}
