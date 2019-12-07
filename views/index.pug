@@ -1,28 +1,67 @@
 doctype html
 html(lang='en')
     head
-        title Jade
-        script(type='text/javascript').
+        title Dog API
         link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css', integrity='sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu', crossorigin='anonymous')
     body
-        nav.navbar.navbar-default.navbar-fixed-top
+        nav.navbar.navbar-default.navbar-fixed-top(style="display: block;")
             .container-fluid
                 // Brand and toggle get grouped for better mobile display
                 .navbar-header
+
                     button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
                         span.sr-only Toggle navigation
                         span.icon-bar
                         span.icon-bar
                         span.icon-bar
-                    a.navbar-brand(href='#') Random APIs
+            a.navbar-brand(href='#') Random APIs
+            #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li.active
+                        a(href='/')
+                            | Home
+                            span.sr-only (current)
+                    li.active
+                        a(href='/firstAPI')
+                            | Dog Images
+                            span.sr-only (current)
 
-
-            // /.navbar-collapse
-            // /.container-fluid
-
-        img(src=image.message )
-
-        .btn-group(role='group', aria-label='...')
-            button.btn.btn-default(type='button' onClick='window.location.reload()') New Dog
-
-
+                    li.active
+                        a(href='/secondAPI')
+                            | Cat Images
+                            span.sr-only (current)
+                    li.active
+                        a(href='/thirdAPI')
+                            | Fox Images
+                            span.sr-only (current)
+        .jumbotron
+            h1(style="margin: 3% 5%") Random Animal Images
+            p(style="margin-left: 5%") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            p 
+        .row
+            .col-sm-6.col-md-4
+                .thumbnail
+                    img(src='https://cdn.editorchoice.com/wp-content/uploads/2019/06/dogtilt.jpg', alt='...')
+                    .caption
+                        h3 Random Dog 
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p
+                            a.btn.btn-primary(href='/firstAPI', role='button') Test It Out
+            .col-sm-4.col-md-4
+                .thumbnail
+                    img(src='https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_960_720.jpg', alt='...')
+                    .caption
+                        h3 Random Cat
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p
+                            a.btn.btn-primary(href='/secondAPI', role='button') Test It Out
+            .col-sm-6.col-md-4
+                .thumbnail
+                    img(src='https://images.unsplash.com/photo-1474511320723-9a56873867b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80')
+                    .caption
+                        h3 Random Fox
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        p
+                            a.btn.btn-primary(href='/thirdAPI', role='button') Test It Out
+                    
+                    
