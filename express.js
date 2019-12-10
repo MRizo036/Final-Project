@@ -35,6 +35,38 @@ app.get('/firstAPI', (req, res) => {
         image: json
       })
     })
+    let breed = "african"
+  fetch(`https://dog.ceo/api/breed/${breed}/images`)
+  
+  .then(res => res.json())
+  .then(
+    (json) => {
+    console.log(json)
+    })
+});
+
+app.get('/secondAPI', (req, res) => {
+  fetch("https://api.thecatapi.com/v1/images/search")
+  .then(res => res.json())
+  .then(
+    (json) => {
+      console.log(json[0].url)
+      res.render('secondAPI', { 
+        catImage: json[0].url
+      })
+    })
+});
+
+app.get('/thirdAPI', (req, res) => {
+  fetch("https://randomfox.ca/floof/")
+  .then(res => res.json())
+  .then(
+    (json) => {
+      console.log(json)
+      res.render('thirdAPI', { 
+        foxImage: json
+      })
+    })
 });
 
   
