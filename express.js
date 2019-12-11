@@ -26,23 +26,48 @@ app.get('/', (req, res) => {
 });
 
 app.get('/firstAPI', (req, res) => {
-  fetch("https://dog.ceo/api/breeds/image/random")
-  .then(res => res.json())
-  .then(
-    (json) => {
-      console.log(json)
-      res.render('firstAPI', { 
-        image: json
-      })
-    })
-    let breed = "african"
-  fetch(`https://dog.ceo/api/breed/${breed}/images`)
+  // fetch("https://dog.ceo/api/breeds/image/random")
+  // .then(res => res.json())
+  // .then(
+  //   (json) => {
+  //     console.log(json)
+  //     res.render('firstAPI', { 
+  //       image: json
+        
+  //     })
+  //   })
+    // let [...breed] = json.message
+  fetch(`https://dog.ceo/api/breeds/list/all`)
   
   .then(res => res.json())
   .then(
     (json) => {
-    console.log(json)
+      var keys = Object.keys(json.message);
+    // var keys = Object.keys(JSON.parse(json.message));
+    console.log(keys);
+    res.render("firstAPI", {
+      breed: keys
     })
+    })
+});
+
+app.get('/breeds/:id', async (req, res) => {
+  try {
+      const URI = `https://dog.ceo/api/breed/${req.params.id}/images`;
+      const dogData = await fetch(URI);
+      const json = await dogData.json();
+      // console.log(json);
+      const pokeName = await json.name;
+      console.log(json);
+  
+      await res.render('breeds', {
+          img: json
+      });
+
+  } catch (error) {
+      console.log(error);
+  }
+       
 });
 
 app.get('/secondAPI', (req, res) => {
