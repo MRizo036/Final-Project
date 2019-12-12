@@ -43,7 +43,6 @@ app.get('/firstAPI', (req, res) => {
   .then(
     (json) => {
       var keys = Object.keys(json.message);
-    // var keys = Object.keys(JSON.parse(json.message));
     console.log(keys);
     res.render("firstAPI", {
       breed: keys
@@ -56,12 +55,20 @@ app.get('/breeds/:id', async (req, res) => {
       const URI = `https://dog.ceo/api/breed/${req.params.id}/images`;
       const dogData = await fetch(URI);
       const json = await dogData.json();
-      // console.log(json);
-      const pokeName = await json.name;
-      console.log(json);
-  
+      
+      totalImg = json.message.length;
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+      }
+
+      trueRandom = getRandomInt(totalImg);
+
+      
+    console.log(trueRandom);
+      // console.log(json.message[trueRandom]);
+
       await res.render('breeds', {
-          img: json
+          img: json.message[trueRandom]
       });
 
   } catch (error) {

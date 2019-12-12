@@ -4,7 +4,7 @@ html(lang='en')
         title Dog API
         link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css', integrity='sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu', crossorigin='anonymous')
     body
-        nav.navbar.navbar-default.navbar-fixed-top
+        nav.navbar.navbar-default
             .container-fluid
                 // Brand and toggle get grouped for better mobile display
                 .navbar-header
@@ -33,17 +33,20 @@ html(lang='en')
                     li.active
                         a(href='/thirdAPI')
                             | Fox Images
-                            span.sr-only (current)
+                            span.sr-only (current)   
+                            
+        .jumbotron 
+            h1(style="margin: 10% 5%") Random Animal Images
+            p(style="margin-left: 5%; margin-right: 5%") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            p 
+        .container
+            .row  
+                each val in [1, 2, 3, 4, 5, 6] 
+                    .col-sm-6.col-md-4
+                        .thumbnail
+                            img(src=img)
+                    
 
-        
-        //- img(src=image.message)
-
-
-        ul
-            each val in breed
-                li= val
-                a(class='button' href='https://dog.ceo/api/breed/'+val+'/images')
-                    |=val
 
         .btn-group(role='group', aria-label='...')
             button.btn.btn-default(type='button' onClick='window.location.reload()') New Dog
