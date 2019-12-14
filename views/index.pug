@@ -9,39 +9,38 @@ html(lang='en')
         script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6', crossorigin='anonymous')
     body
         //Navigation fixed to the top
-        nav.navbar.navbar-default.navbar-fixed-top(style="display: block;")
+        nav.navbar.navbar-default
             .container-fluid
                 // Brand and toggle get grouped for better mobile display
                 .navbar-header
 
-                    button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+                 button.navbar-toggle.collapsed(type='button', data-toggle='collapse',      data-target='#bs-example-navbar-collapse-1', aria-expanded='false', style="padding: 0;")
                         span.sr-only Toggle navigation
                         span.icon-bar
                         span.icon-bar
                         span.icon-bar
             a.navbar-brand(href='#') Random APIs
-            //Page Links
-            #bs-example-navbar-collapse-1.collapse.navbar-collapse
-                ul.nav.navbar-nav
+            #bs-example-navbar-collapse-1.collapse.navbar-collapse(style="padding: 0;")
+                ul.nav.navbar-nav(style="float:right;") 
                     li.active
-                        a(href='/')
+                        a(href='/', style="background: none;")
                             | Home
                             span.sr-only (current)
                     li.active
-                        a(href='/firstAPI')
+                        a(href='/firstAPI', style="background: none;")
                             | Dog Images
                             span.sr-only (current)
 
                     li.active
-                        a(href='/secondAPI')
+                        a(href='/secondAPI', style="background: none;")
                             | Cat Images
                             span.sr-only (current)
                     li.active
-                        a(href='/thirdAPI')
+                        a(href='/thirdAPI', style="background: none;")
                             | Fox Images
                             span.sr-only (current)
         //Top Banner
-        .jumbotron 
+        .jumbotron(style="margin-top: 0%;") 
             h1(style="margin: 10% 5%") Random Animal Images
             p(style="margin-left: 5%; margin-right: 5%") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             p 
@@ -73,5 +72,5 @@ html(lang='en')
                         p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         p
                             a.btn.btn-primary(href='/thirdAPI', role='button') Test It Out
-                    
-                    
+
+

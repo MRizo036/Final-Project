@@ -47,6 +47,7 @@ app.get('/firstAPI', (req, res) => {
     res.render("firstAPI", {
       breed: keys
     })
+    console.log(keys.length)
     })
 });
 
@@ -62,13 +63,27 @@ app.get('/breeds/:id', async (req, res) => {
       }
 
       trueRandom = getRandomInt(totalImg);
+      trueRandom2 = getRandomInt(totalImg);
+      trueRandom3 =  getRandomInt(totalImg);
+      trueRandom4 = getRandomInt(totalImg);
+      trueRandom5 = getRandomInt(totalImg);
+      trueRandom6 = getRandomInt(totalImg);
 
-      
-    console.log(trueRandom);
+      console.log(json);
+    // console.log(trueRandom);
       // console.log(json.message[trueRandom]);
 
       await res.render('breeds', {
-          img: json.message[trueRandom]
+          name: req.params.id,
+          imgs: [
+            json.message[trueRandom],
+            json.message[trueRandom2],
+            json.message[trueRandom3],
+            json.message[trueRandom4],
+            json.message[trueRandom5],
+            json.message[trueRandom6]
+          ]
+          // json.message[trueRandom]
       });
 
   } catch (error) {
