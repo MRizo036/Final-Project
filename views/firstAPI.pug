@@ -8,7 +8,7 @@ html(lang='en')
         script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6', crossorigin='anonymous')
 
     body
-        nav.navbar.navbar-default
+        nav.navbar.navbar-default(style = "margin: 0px;")
             .container-fluid
                 // Brand and toggle get grouped for better mobile display
                 .navbar-header
@@ -20,7 +20,7 @@ html(lang='en')
                         span.icon-bar
             a.navbar-brand(href='#') Random APIs
             #bs-example-navbar-collapse-1.collapse.navbar-collapse(style="padding: 0;")
-                ul.nav.navbar-nav(style="float:right;") 
+                ul.nav.navbar-nav(style="float:right; padding-left: 15px; padding-right: 15px;") 
                     li.active
                         a(href='/', style="background: none;")
                             | Home
@@ -39,7 +39,7 @@ html(lang='en')
                             | Fox Images
                             span.sr-only (current)
 
-        .jumbotron(style="background: url('https://blog.mystart.com/wp-content/uploads/shutterstock_345091346-e1527792775311.jpg');)")
+        .jumbotron(style="background: url('https://www.loudwallpapers.com/wp-content/uploads/2018/12/beautiful-siberian-husky-dog-hd-winter-wallpaper.jpg'); background-size: cover;)")
             h1(style="margin: 10% 5%") Random Dog Images
             p(style="margin-left: 5%; margin-right: 5%") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             p 

@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const port = 8082;
+const PORT = process.env.PORT || 3000;
 const fetch = require('node-fetch');
 const app = express();
  
@@ -118,7 +118,7 @@ app.get('/thirdAPI', (req, res) => {
 
   
 
-const server = app.listen(port, () => {
-    console.log(`Express running → PORT ${server.address().port}`);
+const server = app.listen(PORT, () => {
+    console.log(`Express running → PORT ${PORT}`);
   });
 
