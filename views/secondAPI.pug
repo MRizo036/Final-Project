@@ -20,14 +20,14 @@ html(lang='en')
             a.navbar-brand(href='#') Random APIs
             #bs-example-navbar-collapse-1.collapse.navbar-collapse(style="padding: 0;")
                 ul.nav.navbar-nav(style="float:right; padding-left: 15px; padding-right: 15px; ") 
-                    li.active
+                    li.active()
                         a(href='/', style="background: none;")
                             | Home
-                            span.sr-only (current)
+                            span.sr-only 
                     li.active
                         a(href='/firstAPI', style="background: none;")
                             | Dog Images
-                            span.sr-only (current)
+                            span.sr-only
 
                     li.active
                         a(href='/secondAPI', style="background: none;")
@@ -36,7 +36,7 @@ html(lang='en')
                     li.active
                         a(href='/thirdAPI', style="background: none;")
                             | Fox Images
-                            span.sr-only (current)
+                            span.sr-only
 
         .jumbotron(style="background-image: url('https://img.fonwall.ru/o/11/265692.jpg'); background-size: cover; ") 
             h1(style="margin: 10% 5%; ") Random Cat Image
