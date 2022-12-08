@@ -20,7 +20,7 @@
   "homepage": "https://github.com/MRizo036/Final-Project#readme",
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "node": "^13.2.0",
     "node-fetch": "^2.6.0",
     "nodemon": "^2.0.1",
